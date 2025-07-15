@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corazón Rojo</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #007BFF; /* azul */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: relative;
+    }
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+      top: 0;
+      left: 0;
+    }
+    .heart::after {
+      transform: rotate(45deg);
+      left: auto;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+</body>
+</html>
